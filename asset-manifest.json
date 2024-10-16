@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Kanban/static/css/main.7720a397.css",
+    "main.js": "/Kanban/static/js/main.f6b5e914.js",
+    "static/js/453.f0f88b0d.chunk.js": "/Kanban/static/js/453.f0f88b0d.chunk.js",
+    "static/media/Cancelled.svg": "/Kanban/static/media/Cancelled.360749f102ea2ac68b5841e9f9ff29dd.svg",
+    "static/media/No-priority.svg": "/Kanban/static/media/No-priority.7218b139313728c6a4efa8da6e34852b.svg",
+    "static/media/Done.svg": "/Kanban/static/media/Done.a5158827c6345b2f141ff681c57cb3ac.svg",
+    "index.html": "/Kanban/index.html",
+    "static/media/LP.svg": "/Kanban/static/media/LP.491e21f9000cb90112dea470dbb72650.svg",
+    "static/media/MP.svg": "/Kanban/static/media/MP.83775665307e977d62e9b0fc7fb95cc4.svg",
+    "static/media/HP.svg": "/Kanban/static/media/HP.5024fd0d163cb13c95f2d29079e2974d.svg",
+    "static/media/in-progress.svg": "/Kanban/static/media/in-progress.d4beb72fbc94f765259fc46ecaba9779.svg",
+    "static/media/UPC.svg": "/Kanban/static/media/UPC.9b67f75d5459d4d66573ef9f8e6f6841.svg",
+    "static/media/To-do.svg": "/Kanban/static/media/To-do.c01d92afcffeef58b2cd9ae080df1f58.svg",
+    "main.7720a397.css.map": "/Kanban/static/css/main.7720a397.css.map",
+    "main.f6b5e914.js.map": "/Kanban/static/js/main.f6b5e914.js.map",
+    "453.f0f88b0d.chunk.js.map": "/Kanban/static/js/453.f0f88b0d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7720a397.css",
+    "static/js/main.f6b5e914.js"
+  ]
+}
