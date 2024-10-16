@@ -1,6 +1,4 @@
 import React from "react";
-
-// Corrected paths to icons based on their new location in the 'src/icon_FEtask' folder
 import TodoIcon from "../icon_FEtask/To-do.svg";
 import InProgressIcon from "../icon_FEtask/in-progress.svg";
 import DoneIcon from "../icon_FEtask/Done.svg";
@@ -12,7 +10,6 @@ import MediumPriorityIcon from "../icon_FEtask/MP.svg";
 import HighPriorityIcon from "../icon_FEtask/HP.svg";
 import UrgentPriorityColorIcon from "../icon_FEtask/UPC.svg";
 
-// Function to return the status icon based on the status string
 export const getStatusIcon = (status) => {
   switch (status.toLowerCase()) {
     case "todo":
@@ -24,11 +21,10 @@ export const getStatusIcon = (status) => {
     case "canceled":
       return <img src={CanceledIcon} alt="Canceled Icon" />;
     default:
-      return <img src={TodoIcon} alt="To-do Icon" />; // Default fallback if no status matches
+      return <img src={TodoIcon} alt="To-do Icon" />; 
   }
 };
 
-// Function to return the priority icon based on the priority number
 export const getPriorityIcon = (priority) => {
   switch (priority) {
     case 0:
@@ -42,11 +38,10 @@ export const getPriorityIcon = (priority) => {
     case 4:
       return <img src={UrgentPriorityColorIcon} alt="Urgent Priority Icon" />;
     default:
-      return <img src={TodoIcon} alt="To-do Icon" />; // Default fallback if no priority matches
+      return <img src={TodoIcon} alt="To-do Icon" />; 
   }
 };
 
-// Function to return a user avatar based on the name's first letter
 export const getUserAvatar = (name) => {
   return name ? name.charAt(0).toUpperCase() : "👤";
 };
