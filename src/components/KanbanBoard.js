@@ -7,17 +7,15 @@ import {
 } from "../utils/iconUtils";
 
 const KanbanBoard = ({ tickets, users, grouping, sorting }) => {
-  const statusColumns = ["todo", "in progress", "done", "canceled"]; // Predefined status columns
+  const statusColumns = ["todo", "in progress", "done", "canceled"]; 
 
-  // Function to group and sort tickets based on selected grouping and sorting
   const groupAndSortTickets = () => {
     const grouped = tickets.reduce((acc, ticket) => {
       let key;
 
-      // Grouping logic (by status, user, or priority)
       switch (grouping) {
         case "status":
-          key = ticket.status.toLowerCase(); // Ensure consistent casing
+          key = ticket.status.toLowerCase(); 
           break;
         case "userId":
           key = ticket.userId;
@@ -36,7 +34,6 @@ const KanbanBoard = ({ tickets, users, grouping, sorting }) => {
       return acc;
     }, {});
 
-    // If grouping by status, ensure all status columns are present
     if (grouping === "status") {
       statusColumns.forEach((status) => {
         if (!grouped[status]) {
@@ -45,13 +42,12 @@ const KanbanBoard = ({ tickets, users, grouping, sorting }) => {
       });
     }
 
-    // Sort tickets within each group
     Object.keys(grouped).forEach((key) => {
       grouped[key].sort((a, b) => {
         if (sorting === "priority") {
-          return b.priority - a.priority; // Sort by priority (high to low)
+          return b.priority - a.priority; 
         } else {
-          return a.title.localeCompare(b.title); // Default: sort alphabetically by title
+          return a.title.localeCompare(b.title); 
         }
       });
     });
@@ -61,7 +57,6 @@ const KanbanBoard = ({ tickets, users, grouping, sorting }) => {
 
   const organizedTickets = groupAndSortTickets();
 
-  // Header for each Kanban column, based on grouping
   const getColumnHeader = (group) => {
     switch (grouping) {
       case "status":
@@ -107,7 +102,6 @@ const KanbanBoard = ({ tickets, users, grouping, sorting }) => {
     }
   };
 
-  // Helper function to capitalize the first letter of status
   const capitalizeStatus = (status) => {
     return status
       .split(" ")
@@ -118,7 +112,7 @@ const KanbanBoard = ({ tickets, users, grouping, sorting }) => {
   return (
     <div className="kanban-board">
       {grouping === "status"
-        ? // Loop through predefined status columns
+        ? 
           statusColumns.map((status) => (
             <div key={status} className="kanban-column">
               <h2 className="column-header">{getColumnHeader(status)}</h2>
@@ -133,7 +127,6 @@ const KanbanBoard = ({ tickets, users, grouping, sorting }) => {
               </div>
             </div>
           ))
-        : // When grouping by user or priority, create dynamic columns
           Object.entries(organizedTickets).map(([group, tickets]) => (
             <div key={group} className="kanban-column">
               <h2 className="column-header">{getColumnHeader(group)}</h2>
@@ -152,7 +145,6 @@ const KanbanBoard = ({ tickets, users, grouping, sorting }) => {
   );
 };
 
-// Helper function to capitalize status
 const capitalizeStatus = (status) => {
   return status
     .split(" ")
